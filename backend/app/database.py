@@ -18,7 +18,11 @@ from app.config import settings
 # ── Engine ────────────────────────────────────────────────
 # Supabase connection pooler (Supavisor) requires prepared statements to be
 # disabled — without this asyncpg throws "Tenant or user not found" on Render.
-_connect_args = {"statement_cache_size": 0}
+# Explicitly handling SSL here to avoid "options" argument errors in URI.
+_connect_args = {
+    "statement_cache_size": 0,
+    "ssl": "require"
+}
 
 engine = create_async_engine(
     settings.database_url,
