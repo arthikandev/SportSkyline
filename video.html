@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos – SportSkyline</title>
+  <meta name="description" content="Watch the best sports videos, highlights, interviews, analysis and documentaries on SportSkyline.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+</head>
+<body>
+  <nav><div class="nav-inner">
+    <a href="sports-homepage.html" class="logo">Sport<span>Skyline</span></a>
+    <ul class="nav-links">
+      <li><a href="sports-homepage.html">Home</a></li><li><a href="football.html">Football</a></li>
+      <li><a href="cricket.html">Cricket</a></li><li><a href="basketball.html">Basketball</a></li>
+      <li><a href="f1.html">F1</a></li><li><a href="tennis.html">Tennis</a></li><li><a href="hockey.html">Hockey</a></li>
+      <li class="dropdown"><a href="#">More &#9662;</a><div class="dropdown-menu"><a href="rugby.html">Rugby</a><a href="esports.html">Esports</a><a href="combat.html">Combat</a><a href="nfl.html">NFL</a><a href="olympics.html">Olympics</a></div></li>
+      <li><a href="#" class="nav-trending">Trending</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="search-btn" onclick="location.href='search.html'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Search</button>
+      <button class="live-btn" onclick="location.href='live.html'"><span class="live-dot"></span> Live Scores</button>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div></nav>
+  <div class="mobile-nav" id="mobileNav"><a href="sports-homepage.html">Home</a><a href="football.html">Football</a><a href="cricket.html">Cricket</a><a href="basketball.html">Basketball</a><a href="f1.html">F1</a><a href="tennis.html">Tennis</a><a href="hockey.html">Hockey</a><a href="rugby.html">Rugby</a><a href="esports.html">Esports</a><a href="combat.html">Combat</a><a href="nfl.html">NFL</a><a href="olympics.html">Olympics</a><a href="live.html" style="color:var(--accent);">Live Scores</a></div>
+
+  <div class="page-banner" style="background:linear-gradient(135deg,#1a1a00 0%,#1a0030 50%,#001a1a 100%);">
+    <span class="banner-emoji">🎬</span>
+    <div class="page-banner-inner">
+      <span class="page-banner-tag">Media</span>
+      <h1 class="page-banner-title">🎬 SportSkyline Videos</h1>
+      <p class="page-banner-sub">Highlights · Match Replays · Interviews · Analysis · Documentaries</p>
+    </div>
+  </div>
+
+  <div style="max-width:1340px;margin:0 auto;padding:40px 24px;">
+    <!-- Filter Buttons -->
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;">
+      <button class="search-filter active" style="padding:9px 20px;border-radius:50px;border:2px solid var(--accent);background:var(--accent);color:#fff;font-family:Poppins;font-weight:600;cursor:pointer;">All Videos</button>
+      <button class="search-filter" style="padding:9px 20px;border-radius:50px;border:2px solid #E8E8F0;background:#fff;color:var(--text);font-family:Poppins;font-weight:600;cursor:pointer;transition:all .2s;">Highlights</button>
+      <button class="search-filter" style="padding:9px 20px;border-radius:50px;border:2px solid #E8E8F0;background:#fff;color:var(--text);font-family:Poppins;font-weight:600;cursor:pointer;transition:all .2s;">Interviews</button>
+      <button class="search-filter" style="padding:9px 20px;border-radius:50px;border:2px solid #E8E8F0;background:#fff;color:var(--text);font-family:Poppins;font-weight:600;cursor:pointer;transition:all .2s;">Analysis</button>
+      <button class="search-filter" style="padding:9px 20px;border-radius:50px;border:2px solid #E8E8F0;background:#fff;color:var(--text);font-family:Poppins;font-weight:600;cursor:pointer;transition:all .2s;">Documentaries</button>
+    </div>
+
+    <!-- Featured Video -->
+    <div class="section-heading"><div class="section-bar"></div><h2 class="section-title">Featured</h2></div>
+    <div class="video-card featured-video" style="margin-bottom:48px;">
+      <div class="video-thumb" style="background:linear-gradient(135deg,#1a1a3d,#3d0a0a);height:400px;display:flex;align-items:center;justify-content:center;border-radius:16px;position:relative;cursor:pointer;overflow:hidden;">
+        <div style="font-size:80px;z-index:1;">⚽</div>
+        <div style="position:absolute;inset:0;background:rgba(0,0,0,0.35);border-radius:16px;"></div>
+        <div style="position:absolute;width:72px;height:72px;background:rgba(255,255,255,0.15);backdrop-filter:blur(8px);border-radius:50%;border:2px solid rgba(255,255,255,0.4);display:flex;align-items:center;justify-content:center;z-index:2;cursor:pointer;transition:transform .2s;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+        <span style="position:absolute;top:16px;left:16px;background:var(--accent);color:#fff;padding:4px 12px;border-radius:50px;font-size:11px;font-weight:700;z-index:2;">NEW</span>
+        <span style="position:absolute;bottom:16px;right:16px;background:rgba(0,0,0,0.6);color:#fff;padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;z-index:2;">10:24</span>
+      </div>
+      <div style="padding:20px 0 0;">
+        <span class="card-tag">Football · UCL · Highlights</span>
+        <h2 style="font-size:1.5rem;font-weight:700;color:var(--text);margin:8px 0 10px;">FULL Highlights: Real Madrid 2–1 Man City — Champions League Quarter-Final</h2>
+        <p style="color:var(--light-gray);line-height:1.65;margin-bottom:12px;">Vinicius Jr's brace and a stunning last-minute save from Courtois sent the Bernabéu into raptures as Madrid edged Man City in the Champions League quarter-final first leg. Watch every key moment here.</p>
+        <div class="card-meta">March 27, 2026 &nbsp;·&nbsp; 10:24 &nbsp;·&nbsp; 2.4M views</div>
+      </div>
+    </div>
+
+    <!-- Video Grid -->
+    <div class="section-heading"><div class="section-bar"></div><h2 class="section-title">Latest Videos</h2></div>
+    <div class="video-grid">
+      <div class="video-card"><div class="video-thumb t3"><div class="play-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div><span class="video-duration">8:42</span></div><div class="video-info"><span class="card-tag">Cricket</span><h4 class="video-title">Rohit Sharma 250* — Every Boundary & Milestone</h4><div class="card-meta">980K views · 2 days ago</div></div></div>
+      <div class="video-card"><div class="video-thumb t4"><div class="play-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div><span class="video-duration">6:15</span></div><div class="video-info"><span class="card-tag">F1</span><h4 class="video-title">Verstappen's Bahrain Qualifying Lap Onboard – No Commentary</h4><div class="card-meta">1.1M views · 1 day ago</div></div></div>
+      <div class="video-card"><div class="video-thumb t2"><div class="play-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div><span class="video-duration">14:30</span></div><div class="video-info"><span class="card-tag">Tennis · Interview</span><h4 class="video-title">Alcaraz Full Press Conference After Miami Open Win</h4><div class="card-meta">440K views · 3 days ago</div></div></div>
+      <div class="video-card"><div class="video-thumb t1"><div class="play-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div><span class="video-duration">5:07</span></div><div class="video-info"><span class="card-tag">Basketball</span><h4 class="video-title">Wembanyama's 30-Block Night — Every Rejection</h4><div class="card-meta">3.2M views · 3 days ago</div></div></div>
+      <div class="video-card"><div class="video-thumb t5"><div class="play-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div><span class="video-duration">22:04</span></div><div class="video-info"><span class="card-tag">Documentary</span><h4 class="video-title">The Making of Champions: Inside an Elite Football Academy</h4><div class="card-meta">520K views · 5 days ago</div></div></div>
+      <div class="video-card"><div class="video-thumb t2"><div class="play-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div><span class="video-duration">9:51</span></div><div class="video-info"><span class="card-tag">Rugby</span><h4 class="video-title">All Blacks World Cup Winning Try — Extended Highlights</h4><div class="card-meta">1.8M views · 6 days ago</div></div></div>
+      <div class="video-card"><div class="video-thumb t3"><div class="play-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div><span class="video-duration">4:48</span></div><div class="video-info"><span class="card-tag">Hockey</span><h4 class="video-title">Ovechkin's 900th NHL Goal — The Moment</h4><div class="card-meta">4.5M views · 4 days ago</div></div></div>
+      <div class="video-card"><div class="video-thumb t4"><div class="play-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div><span class="video-duration">18:22</span></div><div class="video-info"><span class="card-tag">Analysis</span><h4 class="video-title">Tactical Breakdown: How Mahomes Demolished the 49ers' Defense</h4><div class="card-meta">760K views · 7 days ago</div></div></div>
+      <div class="video-card"><div class="video-thumb t1"><div class="play-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div><span class="video-duration">7:33</span></div><div class="video-info"><span class="card-tag">Esports</span><h4 class="video-title">Valorant Champions Grand Final — Sentinels vs Vitality Highlights</h4><div class="card-meta">680K views · 2 days ago</div></div></div>
+    </div>
+    <div class="load-more-wrap"><button class="load-more-btn">Load More Videos</button></div>
+  </div>
+
+  <footer><div class="footer-inner"><div class="footer-grid">
+    <div class="footer-brand"><a href="sports-homepage.html" class="logo">Sport<span>Skyline</span></a><p>Your definitive source for live scores, breaking news, and in-depth analysis across every major sport worldwide.</p><div class="social-links"><a href="#" class="social-link">&#120143;</a><a href="#" class="social-link">&#102;</a><a href="#" class="social-link">&#9825;</a><a href="#" class="social-link">&#9654;</a></div></div>
+    <div><p class="footer-col-title">Sports</p><ul class="footer-links"><li><a href="football.html">Football</a></li><li><a href="cricket.html">Cricket</a></li><li><a href="basketball.html">Basketball</a></li><li><a href="f1.html">Formula 1</a></li><li><a href="tennis.html">Tennis</a></li><li><a href="hockey.html">Hockey</a></li></ul></div>
+    <div><p class="footer-col-title">More Sports</p><ul class="footer-links"><li><a href="rugby.html">Rugby</a></li><li><a href="esports.html">Esports</a></li><li><a href="combat.html">Combat Sports</a></li><li><a href="nfl.html">NFL</a></li><li><a href="olympics.html">Olympics</a></li></ul></div>
+    <div><p class="footer-col-title">Company</p><ul class="footer-links"><li><a href="#">About Us</a></li><li><a href="#">Careers</a></li><li><a href="#">Advertise</a></li><li><a href="#">Contact</a></li></ul></div>
+  </div><div class="footer-bottom"><p class="footer-copy">&copy; 2026 SportSkyline Media. All rights reserved.</p><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Cookie Settings</a></div></div></div></footer>
+  <script src="shared.js"></script>
+</body>
+</html>
