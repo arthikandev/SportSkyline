@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportSkyline | Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+    <!-- Login Screen -->
+    <div id="login-screen" class="login-overlay">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="logo">Sport<span>Skyline</span></div>
+                <p>Admin Control Center</p>
+            </div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="email" required placeholder="admin@sportskyline.com">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="password" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn-primary">Sign In <i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+            <div id="login-error" class="error-msg"></div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard Shell (Hidden by default) -->
+    <div id="dashboard-shell" class="dashboard-shell hidden">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">Sport<span>Skyline</span></div>
+                <button id="sidebar-toggle" class="mobile-only"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-group">
+                    <label>Main</label>
+                    <a href="#dashboard" class="nav-link active" data-view="dashboard">
+                        <i class="fa-solid fa-gauge-high"></i> Dashboard
+                    </a>
+                </div>
+                <div class="nav-group">
+                    <label>Content</label>
+                    <a href="#articles" class="nav-link" data-view="articles">
+                        <i class="fa-solid fa-newspaper"></i> Articles
+                    </a>
+                    <a href="#categories" class="nav-link" data-view="categories">
+                        <i class="fa-solid fa-tags"></i> Categories
+                    </a>
+                </div>
+                <div class="nav-group">
+                    <label>Sports Data</label>
+                    <a href="#matches" class="nav-link" data-view="matches">
+                        <i class="fa-solid fa-table-list"></i> Matches
+                    </a>
+                    <a href="#sports" class="nav-link" data-view="sports">
+                        <i class="fa-solid fa-trophy"></i> Sports & Leagues
+                    </a>
+                    <a href="#teams" class="nav-link" data-view="teams">
+                        <i class="fa-solid fa-people-group"></i> Teams
+                    </a>
+                </div>
+                <div class="nav-group">
+                    <label>Marketing</label>
+                    <a href="#ads" class="nav-link" data-view="ads">
+                        <i class="fa-solid fa-rectangle-ad"></i> Ad Banners
+                    </a>
+                </div>
+                <div class="nav-group bottom">
+                    <a href="#settings" class="nav-link" data-view="settings">
+                        <i class="fa-solid fa-gear"></i> Settings
+                    </a>
+                    <button id="logout-btn" class="nav-link logout">
+                        <i class="fa-solid fa-right-from-bracket"></i> Logout
+                    </button>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="view-title">
+                    <h1 id="page-title">Dashboard</h1>
+                </div>
+                <div class="user-profile">
+                    <span id="admin-name">Administrator</span>
+                    <div class="avatar" id="admin-avatar">A</div>
+                </div>
+            </header>
+
+            <div id="content-view" class="view-container">
+                <!-- Views will be injected here -->
+                <div class="loader">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
