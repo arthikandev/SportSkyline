@@ -16,12 +16,17 @@ from app.config import settings
 
 
 # ── Engine ────────────────────────────────────────────────
+# Supabase connection pooler (Supavisor) requires prepared statements to be
+# disabled — without this asyncpg throws "Tenant or user not found" on Render.
+_connect_args = {"statement_cache_size": 0}
+
 engine = create_async_engine(
     settings.database_url,
     pool_size=settings.database_pool_size,
     max_overflow=settings.database_max_overflow,
     echo=settings.debug,
     future=True,
+    connect_args=_connect_args,
 )
 
 # ── Session Factory ───────────────────────────────────────
