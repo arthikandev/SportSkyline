@@ -21,7 +21,7 @@ from app.config import settings
 # Explicitly handling SSL here to avoid "options" argument errors in URI.
 _connect_args = {
     "statement_cache_size": 0,
-    "ssl": "require"
+    "ssl": True
 }
 
 engine = create_async_engine(
