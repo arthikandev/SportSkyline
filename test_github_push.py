@@ -1,12 +1,16 @@
 import requests
 import base64
 import json
+import os
 
-TOKEN = "github_pat_11B5NYYWA01YIgwnJ6OW5j_kih7hKGcpxHaUjKK9ejY1ZVJ00Rq4HjI7iTtRgGFy8IM4265LIVufS7i"
+TOKEN = os.getenv("GITHUB_TOKEN", "")
 OWNER = "arthikandev"
 REPO = "SportSkyline"
 PATH = "README.md"
 CONTENT = "SportSkyline - Live Scores & News"
+
+if not TOKEN:
+    raise RuntimeError("Missing GITHUB_TOKEN environment variable.")
 
 print(f"Testing push for {PATH}...")
 
